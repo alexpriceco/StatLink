@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STAT&ndash;LINK</title>
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+    <link rel="stylesheet" type="text/css" href="grey.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/animate.js" ></script>
+    <script type="text/javascript" src="js/sidebar.js" ></script>
+    <script type="text/javascript" src="js/smooth-scroll.min.js" ></script>
+    
+</head>
+
+<body>
+    <header>
+		<nav id="cd-top-nav">
+			<ul>
+                <li><a href="#0">Login</a></li>
+                <li><a id="cd-menu-trigger" class="cd-menu-text" href="#0">Menu</a></li>
+            </ul>
+		</nav>
+	</header>
+    
+    <main class="cd-main-content">
+        <section id="page-wrap">
+            <a data-scroll href="#features" class="greyscroll">
+                <article class="hero">
+                    <div class="content-container animated fadeInUp"><!--everything above the fold-->
+                        <img class="logo-img" src="logo-grey.psd"><br>
+                        <a href="#features" data-scroll class="animated-super-slowly fadeInUp greyscroll">&#9660;</a>
+                    </div>
+                </article>
+            </a>
+            
+            <article class="purchase top" id="features">
+                <div class="item">
+                    <b class="title">Pick a variant.</b> <br><br>
+                    I designed with two color variants, one red, one blue. You might want to do some A/B testing to
+                    see which one performs better.
+                    <br><br>
+                    To jump right in, click a variant. 
+                    <br><br>
+                    <div class="center">
+                        <a href="home-blue.html" class="button">blue-variant</a>
+                        <a href="home-red.html" class="button">red-variant</a>
+                    </div>
+                    <br><br><br><br><br><br><br><br><br>
+                </div>
+            </article>
+            <div>
+                <nav class="navigator"> 
+                    <a class="navicon-button x">
+                        <div class="navicon"></div>
+                    </a>
+                </nav>
+            </div>
+
+
+            <footer class="greyscale" id="foot">
+                <a href="http://alexprice.co">Website by Alex Price</a>
+            </footer>
+
+        </section>
+
+	</main> <!-- cd-main-content -->
+
+	<nav id="cd-lateral-nav">
+		<ul class="cd-navigation cd-single-item-wrapper">
+			<li><a href="http://stat-link.com/home.html">Variants</a></li>
+			<li><a href="users/0/profile.html">Profile</a></li>
+			<li><a href="#0">Register</a></li>
+			<li><a href="#0">Pricing</a></li>
+			<li><a href="#0">Support</a></li>
+		</ul>
+	</nav>
+    <script>smoothScroll.init();</script>  
+</body>
+</html>

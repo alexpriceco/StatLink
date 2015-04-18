@@ -1,0 +1,275 @@
+/*
+light red EB8B7D  
+dark red C27367  
+
+light green 8ABA7D 
+dark green 8ABA7D 
+
+off white e9e0d6 
+black 222222
+*/
+
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    background-color:#EFEFEF;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 500px;
+    text-align: center;
+}
+.hero {
+    height:99vh;
+    display: table;
+    width: 100%;
+}
+.logo-img {
+    height:50vh;
+}
+.content-container {
+    text-align: center;
+    padding: 0 10vw;   
+    display: table-cell;
+    vertical-align: middle;
+}
+.voltmeter img, .imco img {
+    max-height: 40vh;
+    min-height: 200px;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.empower {
+    vertical-align: middle;
+    text-align:left;
+    display: inline-block;
+}
+.sub {
+    font-size:1.4em;
+}
+.title {
+    font-size: 2.2em;
+}
+.left, 
+.right {
+    width:45%;
+    display: inline-block;
+    padding: 4vh 0;
+}
+.imco {
+    text-align: center;
+}
+.teco {
+    vertical-align: middle;
+    text-align: left;
+}
+.item {
+    padding: 10vh 35vw;
+}
+.red-bg {
+    background-color:#EB8B7D;
+}
+.hidden{
+     opacity:0;
+}
+.hide {
+    display: none;
+}
+.visible{
+     opacity:1;
+}
+a, a:visited {
+    color: #EB7260;
+    text-decoration: none;
+}
+.button {
+    border-radius: 3px;
+    background-color:none;
+    border: 1px solid #222222;
+    display: inline-block;
+    padding: 12px;
+    color: #222222 !important;
+    margin-right:16px;
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+       -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+         -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+.button:hover {
+    background-color: rgba(34, 34, 34, 0.1);
+}
+footer {
+    background-color: #EB8B7D;
+    color: #763930;
+    text-align: center;
+    padding: 3%;
+}
+footer a {
+    color: #763930 !important;
+}
+.modal {
+    position: fixed;
+    top:50%;
+    left:50%;
+    height:500px;
+    width:500px;
+}
+.cleared {
+    display: none;
+}
+
+
+.popup,
+.popup-help {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(62, 62, 62, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+     -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+          transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.popup p,
+.popup-help p {
+    color: #222222;
+}
+.popup-notyet p {
+    width: 70%;
+    margin: 0 auto;
+}
+.popup.is-visible,
+.popup-help.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+     -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+          transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.popup-container,
+.popup-container-help {
+    padding-top: 7vh;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 30vh auto;
+    background: #FFF;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-40px);
+       -moz-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+         -o-transform: translateY(-40px);
+            transform: translateY(-40px);
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+       -moz-transition-property: -moz-transform;
+            transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+       -moz-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+}
+.popup-container-help {
+    margin: 25vh auto;
+}
+.popup-container .green,
+.popup-container-help .green {
+    width:100%;
+    border:none;
+    font-size: 1em;
+    background-color:#EB8B7D;
+    border-radius: 0 0 2px 2px;
+    padding:1.4em;
+}
+textarea, input {
+    resize: none;
+    padding:0;
+    margin:0;
+    width: 49%;
+}
+input[type=text], textarea {
+    border-radius: 0.25em;
+    font-size: 1em;
+    padding: 12px 20px;
+    border: 1px solid #d2d8d8;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+       -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+         -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+input:focus, textarea:focus {
+    border-color: #343642;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+input[type=submit] {
+    padding: 16px 0;
+    cursor: pointer;
+    background: #EB8B7D;
+    color: #FFF;
+    text-transform: uppercase;
+    border: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+       -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+         -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+input[type=submit]:hover, input[type=submit]:focus {
+    background: #C27367 ;
+    outline: none;
+}
+
+@media (min-width: 40px) and (max-width: 991px) {
+    .content-container { 
+        padding: 0 5vw;
+        display: block;
+    }
+    .popup-container, .popup-container-help {
+        max-width: none;
+        font-size: 2.2em;
+        margin-top: 20vh;
+    }
+    .popup-container {
+        margin-top:25vh;
+    }
+    .teco, .imco, .voltmeter, .empower {
+        width:100%;
+        min-width: 600px;
+        display: inline-block;
+    }
+    .item { 
+        padding: 2vh 5vw;
+        margin:0 auto;
+        display: table;
+        margin: 0 auto;
+    }
+    .left, .right {
+        width:80%;
+        min-width: 300px;
+        font-size: 2.8em;
+    }
+    footer {  
+        font-size: 2.8em;
+        padding: 7%;
+    }
+    .button {
+        padding: 24px;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STAT&ndash;LINK &nbsp;&#124;&nbsp; RED</title>
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+    <link rel="stylesheet" type="text/css" href="main-red.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/animate.js" ></script>
+    <script type="text/javascript" src="js/sidebar.js" ></script>
+    <script type="text/javascript" src="js/modal.js" ></script>
+    <script type="text/javascript" src="js/smooth-scroll.min.js" ></script>
+</head>
+
+<body>
+    <header>
+		<nav id="cd-top-nav">
+			<ul>
+                <li><a href="#0">Login</a></li>
+                <li><a id="cd-menu-trigger" class="cd-menu-text" href="#0">Menu</a></li>
+            </ul>
+		</nav>
+	</header>
+    
+    <main class="cd-main-content">
+        <section id="page-wrap">
+            <a data-scroll href="#features">
+                <article class="hero">
+                    <div class="content-container animated fadeInUp"><!--everything above the fold-->
+                        <img class="logo-img" src="logo-red.psd"><br>
+                        <a data-scroll class="animated-super-slowly fadeInUp scroll-link" href="#features">&#9660;</a>
+                    </div>
+                </article>
+            </a>
+
+            <article class="features" id="features"><!--first item-->
+                <div class="item top red-bg">
+                    <br><br><br><br>
+                    <b class="sub">Lorem ipsum dolor.</b> <br><br>
+                    Sit amet, consectetur adipiscing elit. 
+                    Proin sit amet consectetur augue, at faucibus nisi. Curabitur id dapibus felis, ut ultrices dolor. 
+                    Donec non arcu augue. Cras lorem purus, pulvinar ut mollis in, varius a sem. 
+                    <br><br><br><br>
+                </div>
+
+                <div class="item top">
+                    <br><br><br><br>
+                    <b class="sub">Fusce lobortis accumsan mi.</b> <br><br>
+                    Nulla blandit a augue vitae accumsan. Donec eget varius nibh. 
+                    Etiam auctor cursus lobortis. Quisque iaculis laoreet bibendum. 
+                    Proin condimentum viverra efficitur.
+                    <br><br><br><br>
+                </div>
+
+                <div class="item top red-bg">
+                    <br><br><br><br>
+                    <b class="sub">Libero, eu rutrum arcu laoreet</b> <br><br>
+                    Fusce lobortis accumsan mi, sed vestibulum lorem sollicitudin aliquam. 
+                    Vestibulum rutrum, est id bibendum maximus, nulla odio euismod mi, vitae tincidunt nibh lorem vitae sapien. 
+                    Donec sodales neque et tincidunt sollicitudin. Duis vehicula, nunc eget varius finibus. 
+                    <br><br><br><br>
+                </div>
+            </article>
+
+            <article class="purchase top"><!--buy phase-->
+                <div class="item">
+                    <b class="title">Nam varius eu elit ac elementum.</b> <br><br>
+                    Lacus mi pellentesque sem, at cursus nisi purus ut velit. Morbi sit amet tincidunt urna. 
+                    Vivamus volutpat arcu nec nunc fermentum sodales. Sed eu aliquet tellus.
+                    Praesent euismod ipsum sit amet enim accumsan, <a href="#" class="popup-trigger"> aliquet lorem euismod</a>. 
+                    <br><br>
+                    <div class="center">
+                        <a href="home.html" class="button">back to variants</a>                
+                    </div>
+                </div>
+            </article>
+
+
+            <footer>
+                <a href="#" class="popup-trigger-help">Got an issue?</a> 
+                &nbsp;&nbsp;&#124;&nbsp;&nbsp; 
+                <a href="http://alexprice.co">Website by Alex Price</a>
+            </footer>
+
+        </section>
+
+        <div class="popup-help" role="alert"> <!--this is the problem email popup modal-->
+            <div class="popup-container-help">
+                <p>Uh-oh. What went wrong?</p><br>
+                <form method="post" action="mailer.php">
+                    <input type="text" name="name" placeholder="name" ><br><br>
+                    <input type="email" name="email" placeholder="email"><br><br>
+                    <textarea rows="4" name="comments" placeholder="what's the issue?"></textarea><br><br>
+                    <div class="hide">
+                        <label for="spam">What is two plus two?</label>
+                        <input name="spam" type="text" size="4" id="spam">
+                    </div>  
+                    <br>
+                    <input type="submit" name="submit" value="Send" class="green"></input>
+                </form>
+            </div>
+        </div>   
+
+        <div class="popup" role="alert"> <!--this is the email popup modal-->
+            <div class="popup-container">
+                <p>Name and email, you know the drill.</p><br>
+                <form method="post" action="mailer.php">
+                    <div><input name="name" type="text" placeholder="name"></div><br>
+                    <div><input name="email" type="text" placeholder="email"></div><br>
+                    <div class="hide"><input name="spam" type="text"></div><br>
+                    <div><input type="submit" name="submit" value="Send" class="green"></div>
+                </form>
+            </div>
+        </div>  
+    </main> <!-- cd-main-content -->
+
+	<nav id="cd-lateral-nav">
+		<ul class="cd-navigation cd-single-item-wrapper">
+			<li><a href="http://stat-link.com/home.html">Variants</a></li>
+			<li><a href="users/0/profile.html">Profile</a></li>
+			<li><a href="#0">Register</a></li>
+			<li><a href="#0">Pricing</a></li>
+			<li><a href="#0">Support</a></li>
+		</ul>
+	</nav>
+
+    <script>smoothScroll.init();</script>  
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('.right').addClass("hidden").viewportChecker({
+                classToAdd: 'visible animated fadeInRight',
+                offset: 0    
+               });   
+            jQuery('.left').addClass("hidden").viewportChecker({
+                classToAdd: 'visible animated fadeInLeft' ,
+                offset: 0   
+               });  
+            jQuery('.top').addClass("hidden").viewportChecker({
+                classToAdd: 'visible animated fadeInUp' ,
+                offset: 0   
+               }); 
+        });            
+    </script>
+    <script>smoothScroll.init();</script>   
+</body>
+</html>

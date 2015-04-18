@@ -1,0 +1,209 @@
+
+.cd-img-replace {
+  /* replace text with a background-image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.cd-main-content {
+  /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
+  min-height: 100%;
+  position: relative;
+    background-color: #EFEFEF;
+  z-index: 2;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.cd-main-content.lateral-menu-is-open {
+  /* translate to show the lateral menu - all content needs to be put in the .cd-main-content to translate*/
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: none;
+  z-index: 3;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+header.lateral-menu-is-open {
+  /* translate to show the lateral menu */
+  -webkit-transform: translateX(-260px);
+  -moz-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+}
+header.is-fixed {
+  position: fixed;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    height: 70px;
+  }
+}
+
+#cd-logo {
+  display: block;
+  float: left;
+  margin: 12px 0 0 20px;
+}
+#cd-logo img {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  #cd-logo {
+    margin: 22px 0 0 30px;
+  }
+}
+
+#cd-top-nav {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 100%;
+  display: none;
+}
+#cd-top-nav ul {
+  height: 100%;
+  padding-top: 18px;
+}
+#cd-top-nav li {
+  display: inline-block;
+  margin-right: 1em;
+}
+#cd-top-nav a {
+  display: inline-block;
+  padding: .5em;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+       -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+         -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+#cd-top-nav a.current {
+  background-color: #222222;
+}
+.no-touch #cd-top-nav a:hover {
+     color: rgba(255, 255, 255, 0.7);
+}
+@media only screen and (min-width: 768px) {
+    #cd-top-nav {
+        display: block;
+    }
+}
+
+#cd-menu-trigger {
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: none;
+    color: #ccc;
+}
+#cd-menu-trigger .cd-menu-text {
+  height: 100%;
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: 600;
+}
+.cd-menu-text:hover {
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+       -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+         -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+#cd-lateral-nav {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  /* the secondary navigation is covered by the main element */
+  z-index: 1;
+  width: 260px;
+  background-color: #222222;
+  overflow-y: auto;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform .4s 0s, visibility 0s .4s;
+  -moz-transition: -moz-transform .4s 0s, visibility 0s .4s;
+  transition: transform .4s 0s, visibility 0s .4s;
+  /* this creates the subtle slide in animation of the navigation */
+  -webkit-transform: translateX(80px);
+  -moz-transform: translateX(80px);
+  -ms-transform: translateX(80px);
+  -o-transform: translateX(80px);
+  transform: translateX(80px);
+}
+#cd-lateral-nav .cd-navigation {
+  margin: 20vh 6vw;
+}
+.cd-navigation li {
+    list-style: none;
+}
+#cd-lateral-nav .sub-menu {
+  padding: 0 10px 20px 15px;
+  display: none;
+}
+#cd-lateral-nav a {
+  display: block;
+  line-height: 2em;
+  padding: 0 16px 0 32px;
+  color: #a3a3a3;
+}
+#cd-lateral-nav a.current {
+  background-color: #222222;
+  color: #a3a3a3;
+}
+#cd-lateral-nav a:hover {
+    color: #fefefe !important;
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+       -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+         -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+            transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+#cd-lateral-nav.lateral-menu-is-open {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+  -webkit-transition: -webkit-transform .4s 0s, visibility 0s 0s;
+  -moz-transition: -moz-transform .4s 0s, visibility 0s 0s;
+  transition: transform .4s 0s, visibility 0s 0s;
+  /* smooth the scrolling on touch devices - webkit browsers */
+  -webkit-overflow-scrolling: touch;
+}
